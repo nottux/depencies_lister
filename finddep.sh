@@ -17,4 +17,4 @@ read v
 if [ $v = y -o $v = Y -o $v = Yes -o $v = yes -o $v = YES ]; then j="echo {}; "; b=u; else b=d; fi
 if [ $v = n -o $v = N -o $v = No -o $v = no -o $v = NO ]; then b=u; x=" | xargs"; fi
 if [ $b = "d" ]; then echo wrong entry, ending; exit; fi
-eval "find *.deb -exec sh -c '$j\ar p {} control.tar.gz | tar zx -O | grep Depends | cut -c 8-' \;$x$a$c"
+eval "find *.deb -exec sh -c '$j\ar p {} control.tar.gz | tar zx -O | grep Depends | cut -c 9- | tr -d ","' \;$x$a$c"
