@@ -1,3 +1,4 @@
+#!/bin/sh
 echo enter .deb file/files location
 read v
 cd $v
