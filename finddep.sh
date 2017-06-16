@@ -8,7 +8,7 @@ ls *.deb
 echo
 echo debian packages
 echo "if you don't want to continue do ctrl+c"
-echo "are you want to write stdout to a file? (yes/no)"
+echo "are you want to write output to a file? (yes/no)"
 read v
 if [ $v = y -o $v = Y -o $v = Yes -o $v = yes -o $v = YES ]; then echo enter the file name; read c; a=" > "; b=u; else b=d; fi
 if [ $v = n -o $v = N -o $v = No -o $v = no -o $v = NO ]; then b=u; fi
